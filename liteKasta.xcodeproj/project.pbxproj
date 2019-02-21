@@ -319,7 +319,6 @@
 				3AA6A4FA221ECB3D005EFAA8 /* ReusableView.swift */,
 			);
 			name = ReusableView;
-			path = "New Group";
 			sourceTree = "<group>";
 		};
 		3AB893C3221BF09E003F2142 /* Router */ = {
