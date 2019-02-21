@@ -28,11 +28,11 @@ final class NextCampaingsCell: UICollectionViewCell {
             height += LocalConstants.TextInfoBaseHeight
         }
 
-        if let _ = viewModel.secondDescr {
+        if let _ = viewModel.secondTitle {
             height += LocalConstants.TextInfoBaseHeight
         }
 
-        if let _ = viewModel.thirdDescr {
+        if let _ = viewModel.thirdTitle {
             height += LocalConstants.TextInfoBaseHeight
         }
 
