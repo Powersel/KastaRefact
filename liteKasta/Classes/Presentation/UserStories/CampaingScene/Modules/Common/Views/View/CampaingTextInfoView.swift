@@ -32,36 +32,42 @@ final class CampaingTextInfoView: UIView, ReusableView {
         descriptionLabel.text = description
     }
 
+    override func layoutSubviews() {
+        super.layoutSubviews()
+
+        titleLabel.frame = CGRect(x: LocalConstants.PointPositionX16,
+                                  y: 0,
+                                  width: self.bounds.width,
+                                  height: LocalConstants.TitleLabelFrameHeight)
+
+        descriptionLabel.frame = CGRect(x: LocalConstants.PointPositionX16,
+                                        y: titleLabel.frame.height + LocalConstants.LabelsVerticalInset,
+                                        width: self.bounds.width,
+                                        height: LocalConstants.DescLabelFrameHeight)
+    }
+
     //MARK: Private
     private func configureOutlets() {
-
-        titleLabel.frame = CGRect(x: 16,
-                             y: 0,
-                             width: self.bounds.width,
-                             height: LocalConstants.TitleLabelFrameHeight)
-
         titleLabel.font = .mediumWeight17
         titleLabel.textColor = .black
         titleLabel.textAlignment = .left
         titleLabel.numberOfLines = 0
         addSubview(titleLabel)
 
-        descriptionLabel.frame = CGRect(x: 16,
-                                        y: titleLabel.frame.height + LocalConstants.LabelsVerticalInset,
-                                        width: self.bounds.width,
-                                        height: LocalConstants.DescLabelFrameHeight)
+
         descriptionLabel.font = .regularWeight14
         descriptionLabel.textColor = .descriptionGreyText
         descriptionLabel.numberOfLines = 0
         addSubview(descriptionLabel)
     }
 
-    func prepareForReuse() {
+    func prepareForCollectionReuse() {
         titleLabel.text = ""
         descriptionLabel.text = ""
     }
 
     private enum LocalConstants {
+        static let PointPositionX16: CGFloat = 16
         static let TitleLabelFrameHeight: CGFloat = 18
         static let DescLabelFrameHeight: CGFloat = 14
         static let LabelsVerticalInset: CGFloat = 6
