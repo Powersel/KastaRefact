@@ -9,5 +9,5 @@
 import UIKit
 
 protocol ReusableView where Self: UIView  {
-    func prepareForReuse()
+    func prepareForCollectionReuse()
 }
