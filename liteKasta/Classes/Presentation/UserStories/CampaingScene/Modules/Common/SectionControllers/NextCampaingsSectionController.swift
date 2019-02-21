@@ -58,26 +58,12 @@ final class NextCampaingsSectionController: ListSectionController {
     private func calculateDynamicHeight(with viewModel: NextCampaignViewModel,
                                        maxWidth: CGFloat) -> CGSize {
         let width = maxWidth - LocalConstants.Insets.left * 2
-        var height = LocalConstants.CellBaseHeigth
-
-        if let _ = viewModel.firstTitle {
-            height += LocalConstants.TextInfoViewBaseHeight
-        }
-
-        if let _ = viewModel.secondDescr {
-            height += LocalConstants.TextInfoViewBaseHeight
-        }
-
-        if let _ = viewModel.thirdDescr {
-            height += LocalConstants.TextInfoViewBaseHeight
-        }
+        let height = NextCampaingsCell.desiredHeightFor(with: viewModel)
 
         return CGSize(width: width, height: height)
     }
 
     private enum LocalConstants {
         static let Insets: UIEdgeInsets = UIEdgeInsets(top: 8, left: 8, bottom: 0, right: 8)
-        static let CellBaseHeigth: CGFloat = 16 + 16 + 12 + 16 + 16
-        static let TextInfoViewBaseHeight: CGFloat = 64
     }
 }
