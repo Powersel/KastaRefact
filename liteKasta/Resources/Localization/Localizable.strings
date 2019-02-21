@@ -1,0 +1,28 @@
+/* 
+  Localizable.strings
+  liteKasta
+
+  Created by Zoreslav Khimich on 4/4/18.
+  Copyright © 2018 Markason LLC. All rights reserved.
+*/
+
+// MARK: - UICollectionViewCell
+//UICollectionViewCell localization keys - values -> *Primary level*
+
+// NextCampaings view cell
+"LS.CollectionCell.NextCampaings.Title" = "Cкоро в продаже";
+"LS.CollectionCell.NextCampaings.Button.Title" = "Все предстоящие акции";
+
+// MARK: - Views
+//Views outlets localization keys - values
+
+// Campaings general error view
+"LS.View.CampaingsGeneralError.RetryButton.Title" = "Попробовать еще раз?";
+
+// MARK: - Error states
+//Error states localization keys - values
+
+// Network errors
+"LS.ErrorStates.Network.Connection" = "Не возможно подключиться к modnaKasta";
+"LS.ErrorStates.Network.ModelsMapping" = "Упс, у нас что то прошло не так, мы приносим извинения и просим попробовать позже";
+"LS.ErrorStates.Network.General" = "Упс, у нас что то прошло не так пока мы добавляли новые товары. Пожалуйста попробуйте позже";
